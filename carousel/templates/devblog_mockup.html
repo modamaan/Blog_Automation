@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevBlog Mockup</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #111111;
+            --text-muted: #6b7280;
+            --border-color: #e5e7eb;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            box-sizing: border-box;
+            width: 1080px;
+            height: 1350px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* ── Header ── */
+        header {
+            width: 100%;
+            height: 80px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 40px;
+            box-sizing: border-box;
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 30px;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-link {
+            font-size: 16px;
+            color: var(--text-muted);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 25px;
+        }
+
+        .avatar {
+            width: 40px;
+            height: 40px;
+            background-color: #8b5cf6;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 18px;
+        }
+
+        .write-btn {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--text-muted);
+            font-weight: 500;
+            font-size: 16px;
+        }
+
+        /* ── Content Container ── */
+        .container {
+            width: 100%;
+            max-width: 800px;
+            padding: 60px 0;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        h1 {
+            font-size: 54px;
+            font-weight: 900;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            margin: 0 0 10px 0;
+            color: var(--text-main);
+        }
+
+        .meta-section {
+            display: flex;
+            flex-direction: column;
+            gap: 4px;
+            margin-bottom: 20px;
+        }
+
+        .author-name {
+            font-weight: 700;
+            font-size: 16px;
+        }
+
+        .post-meta {
+            color: var(--text-muted);
+            font-size: 15px;
+            font-weight: 400;
+        }
+
+        .thumbnail-container {
+            width: 100%;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .thumbnail-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .fake-content {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--text-main);
+            margin-top: 10px;
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header Mockup -->
+    <header>
+        <div class="header-left">
+            <div class="logo">DevBlog</div>
+            <div class="nav-link">Store</div>
+        </div>
+        <div class="header-right">
+            <div class="nav-link">Drafts</div>
+            <div class="nav-link">Products</div>
+            <div class="write-btn">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"></path><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"></path></svg>
+                Write
+            </div>
+            <div class="avatar">a</div>
+        </div>
+    </header>
+
+    <!-- Post Mockup -->
+    <div class="container">
+        <h1>{{ seo_title }}</h1>
+        
+        <div class="meta-section">
+            <div class="author-name">DevBlog</div>
+            <div class="post-meta">{{ date }} · {{ read_time }} min read · {{ views }} views</div>
+        </div>
+
+        {% if thumbnail_url %}
+        <div class="thumbnail-container">
+            <img src="{{ thumbnail_url }}" alt="Blog Thumbnail">
+        </div>
+        {% endif %}
+
+        <div class="fake-content">
+            <!-- Simulating the start of the article -->
+            <div style="height: 20px; background: #f3f4f6; border-radius: 4px; width: 100%; margin-bottom: 12px;"></div>
+            <div style="height: 20px; background: #f3f4f6; border-radius: 4px; width: 90%; margin-bottom: 12px;"></div>
+            <div style="height: 20px; background: #f3f4f6; border-radius: 4px; width: 95%;"></div>
+        </div>
+    </div>
+
+</body>
+</html>

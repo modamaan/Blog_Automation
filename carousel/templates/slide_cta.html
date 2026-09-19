@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1350px;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(135deg, #1a0533 0%, #6d28d9 60%, #4f46e5 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 100px 80px;
+    position: relative;
+  }
+
+  .emoji { font-size: 96px; margin-bottom: 40px; }
+
+  h2 {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.1;
+    margin-bottom: 40px;
+  }
+
+  .body {
+    font-size: 34px;
+    font-weight: 400;
+    line-height: 1.5;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 70px;
+  }
+
+  .cta-pill {
+    background: #ffffff;
+    color: #4f46e5;
+    font-size: 30px;
+    font-weight: 700;
+    padding: 20px 60px;
+    border-radius: 100px;
+    margin-bottom: 30px;
+  }
+
+  .sub-cta {
+    font-size: 26px;
+    color: rgba(255,255,255,0.6);
+  }
+
+  .brand {
+    position: absolute;
+    bottom: 50px;
+    font-size: 26px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.5);
+    letter-spacing: 2px;
+  }
+</style>
+</head>
+<body>
+  <div class="emoji">🔖</div>
+  <h2>{{ headline }}</h2>
+  <p class="body">{{ body }}</p>
+  <div class="cta-pill">Read Full Post →</div>
+  <p class="sub-cta">devblog.blog</p>
+  <div class="brand">devblog</div>
+</body>
+</html>

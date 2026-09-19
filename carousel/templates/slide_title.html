@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    width: 1080px;
+    height: 1350px;
+    font-family: 'Inter', system-ui, sans-serif;
+    background: linear-gradient(135deg, #0f0c29 0%, #302b63 50%, #24243e 100%);
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 80px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* Decorative glow */
+  body::before {
+    content: '';
+    position: absolute;
+    top: -200px; left: -200px;
+    width: 600px; height: 600px;
+    background: radial-gradient(circle, rgba(99,102,241,0.3) 0%, transparent 70%);
+    pointer-events: none;
+  }
+
+  .brand {
+    position: absolute;
+    top: 50px;
+    left: 80px;
+    font-size: 28px;
+    font-weight: 700;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 2px;
+  }
+
+  .slide-num {
+    position: absolute;
+    top: 50px;
+    right: 80px;
+    font-size: 24px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.3);
+  }
+
+  .tag {
+    display: inline-block;
+    background: rgba(99,102,241,0.3);
+    border: 1px solid rgba(99,102,241,0.6);
+    color: #a5b4fc;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    padding: 10px 24px;
+    border-radius: 50px;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    font-size: 72px;
+    font-weight: 900;
+    line-height: 1.1;
+    text-align: center;
+    background: linear-gradient(90deg, #ffffff, #a5b4fc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 40px;
+  }
+
+  .body {
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 1.5;
+    text-align: center;
+    color: rgba(255,255,255,0.75);
+    max-width: 860px;
+  }
+
+  .footer {
+    position: absolute;
+    bottom: 50px;
+    left: 0; right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    color: rgba(255,255,255,0.3);
+    font-size: 22px;
+  }
+
+  .dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.3); }
+</style>
+</head>
+<body>
+  <div class="brand">devblog</div>
+  <div class="slide-num">{{ slide_num }}/{{ total_slides }}</div>
+
+  <div class="tag">{{ topic }}</div>
+  <h1>{{ headline }}</h1>
+  <p class="body">{{ body }}</p>
+
+  <div class="footer">
+    <span>devblog.blog</span>
+    <div class="dot"></div>
+    <span>Save for later 🔖</span>
+  </div>
+</body>
+</html>

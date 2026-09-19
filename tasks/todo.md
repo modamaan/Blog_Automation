@@ -1,0 +1,19 @@
+- [x] Task 1: Clean up `app/main.py`
+  - Acceptance: `poll_telegram_updates` is no longer imported or run at startup.
+  - Verify: Build/startup succeeds without error.
+  - Files: `app/main.py`
+- [x] Task 2: Delete Poller Script
+  - Acceptance: `app/tools/telegram_poller.py` is completely removed.
+  - Verify: File is deleted.
+  - Files: `app/tools/telegram_poller.py`
+- [x] Task 3: Restore n8n in Docker Compose
+  - Acceptance: `n8n` is uncommented in `docker-compose.yml`.
+  - Verify: `docker-compose config` is valid.
+  - Files: `docker-compose.yml`
+- [x] Task 4: Restore n8n in Run Scripts
+  - Acceptance: `run.ps1` and `run.bat` run `docker-compose up -d` without restricting it to only postgres and redis.
+  - Verify: Scripts execute correctly.
+  - Files: `run.ps1`, `run.bat`
+- [x] Task 5: User Handoff for n8n Setup
+  - Acceptance: Provide the user with a JSON workflow file to import into n8n and instructions on starting ngrok.
+  - Verify: User confirms n8n is receiving webhooks.
