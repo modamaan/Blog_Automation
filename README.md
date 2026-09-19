@@ -1,5 +1,11 @@
 # DevBlog Autonomous Pipeline
 
+
+
+https://github.com/user-attachments/assets/65a1df40-fc85-4490-8ab4-8775d49bbc39
+
+
+
 This repository contains the backend for an autonomous blog content generation pipeline. Powered by FastAPI and LangGraph, it features a series of intelligent AI agents that work together to find trending topics, research, write, fact-check, optimize for SEO, generate social media posts, and publish the final blog post.
 
 It also integrates with Telegram for a Human-in-the-Loop (HITL) review process and uses n8n for workflow automation.
